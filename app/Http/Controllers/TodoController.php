@@ -30,7 +30,7 @@ class TodoController extends Controller
     public function store(Request $request)
     {
         $item = new Todo;
-        $item->content = $request->content;
+        $item->todo = $request->todo;
         $item->timestamps = false;
         $item->save();
         return response()->json([
@@ -70,7 +70,7 @@ class TodoController extends Controller
     public function update(Request $request, Todo $todo)
     {
         $item = Todo::where('id', $todo->id)->first();
-        $item->content = $request->content;
+        $item->todo = $request->todo;
         $item->timestamps = false;
         $item->save();
         if ($item) {
