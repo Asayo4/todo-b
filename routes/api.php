@@ -6,7 +6,7 @@ use App\Http\Controllers\TodoController;
 
 
 Route::apiResource('/todo', TodoController::class);
-Route::post('/', [TodoController::class]);
-Route::get('/', [TodoController::class]);
-Route::put('/', [TodoController::class]);
-Route::delete('/', [TodoController::class]);
+Route::post('/todo', [TodoController::class]);
+Route::get('/todo', [TodoController::class]);
+Route::put('/todo', [TodoController::class]);
+Route::delete('/todo', [TodoController::class]);
