@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TodoController;
+use App\Models\Todo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::delete("/aoi/todo/(id)", [TodoController::class, 'delete']);
+Route::put("/aoi/todo/(id)", [TodoController::class, 'put']);
