@@ -18,5 +18,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::delete('todo/{todo}', 'TodoController@destroy')->name('todo.destroy');
-Route::put('todo/{todo}', 'TodoControllerr@update')->name('todo.update');
